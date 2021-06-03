@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="home_name">Home</string>
+    <string name="category_name">Category</string>
+    <string name="favorite_name">Faorite</string>
+    <string name="settings_name">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="listView">ListView</string>
+    <string name="Description">TextView</string>
+    <string name="CategoryName">TextView</string>
+    <string name="Icon">ImageView</string>
+    <string name="linearLayout">LinearLayout</string>
+</resources>
