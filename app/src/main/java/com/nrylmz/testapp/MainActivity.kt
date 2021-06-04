@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         var navController = findNavController(R.id.fragmentContainer)
 
         bottomNavigationView.setupWithNavController(navController)
+
     }
 
 }
