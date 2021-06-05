@@ -1,14 +1,12 @@
 package com.nrylmz.testapp
 
-import android.annotation.SuppressLint
-import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.GridView
+import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.fragment_favorite.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,6 +23,9 @@ class favoriteFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private var gridview: GridView?=null
+    private var arrayList:ArrayList<Product> ?= null
+    private var productAdapter:ProductAdapter ?= null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +40,7 @@ class favoriteFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        // Inflate the layout for this
         return inflater.inflate(R.layout.fragment_favorite, container, false)
     }
 
@@ -61,6 +62,34 @@ class favoriteFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onViewCreated (view: View, savedInstanceState: Bundle?){
+
+        gridview = getActivity()?.findViewById(R.id.mygrid)
+        arrayList = ArrayList()
+        arrayList = setDataList()
+        productAdapter = ProductAdapter(this.requireContext(), arrayList!!)
+        gridview?.adapter=productAdapter
+    }
+
+    private fun setDataList():ArrayList<Product>{
+        var arrayList:ArrayList<Product> =ArrayList()
+        arrayList.add(Product(R.drawable.star_border,"product1"))
+        arrayList.add(Product(R.drawable.star_border,"product2"))
+        arrayList.add(Product(R.drawable.star_border,"product3"))
+        arrayList.add(Product(R.drawable.star_border,"product4"))
+        arrayList.add(Product(R.drawable.star_border,"product5"))
+        arrayList.add(Product(R.drawable.star_border,"product6"))
+        arrayList.add(Product(R.drawable.star_border,"product7"))
+        arrayList.add(Product(R.drawable.star_border,"product8"))
+        arrayList.add(Product(R.drawable.star_border,"product9"))
+        arrayList.add(Product(R.drawable.star_border,"product10"))
+        arrayList.add(Product(R.drawable.star_border,"product11"))
+        arrayList.add(Product(R.drawable.star_border,"product12"))
+        arrayList.add(Product(R.drawable.star_border,"product13"))
+
+        return arrayList
     }
 
 }
