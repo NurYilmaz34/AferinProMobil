@@ -22,7 +22,7 @@
 
         <TextView
             android:id="@+id/SettingsType"
-            android:layout_width="330dp"
+            android:layout_width="335dp"
             android:layout_height="fill_parent"
             android:maxLines="1"
             android:paddingStart="15dp"
@@ -37,6 +37,7 @@
             android:id="@+id/NextImage"
             android:layout_width="30dp"
             android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
             app:srcCompat="@drawable/next" />
 
 

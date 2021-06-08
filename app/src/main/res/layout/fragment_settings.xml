@@ -5,10 +5,12 @@
     android:id="@+id/settingsFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".settingsFragment">
+    tools:context=".settingsFragment"
+    android:layout_below="@+id/Theme.TestApp">
 
     <ListView
         android:id="@+id/listViewSettings"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        />
 </LinearLayout>
